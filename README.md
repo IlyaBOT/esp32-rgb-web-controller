@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/Version-1.0-brightgreen.svg?style=for-the-badge)](#versions)
-[![](https://img.shields.io/badge/IB-WorkShop-Telegram-blue.svg?style=for-the-badge)](https://www.vk.com/ibworkshop)
+[![](https://img.shields.io/badge/IB_WorkShop-Telegram-blue.svg?style=for-the-badge)](https://www.vk.com/ibworkshop)
 
 # **ESP32 RGB Web-Controller**
 Firmware for ESP-32 to control RGB and Adress RGB strips via the web interface. Works only over Wi-Fi.
