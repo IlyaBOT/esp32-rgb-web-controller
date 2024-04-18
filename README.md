@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Version-1.0-brightgreen.svg?style=for-the-badge)
+[![](https://img.shields.io/badge/Version-1.0-brightgreen.svg?style=for-the-badge)]()
 [![](https://img.shields.io/badge/IB_WorkShop-Telegram-blue.svg?style=for-the-badge)](https://t.me/ibworkshop)
 
 # **ESP32 RGB Web-Controller**
