@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://i.imgur.com/vT4FIcd.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #666666;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        h1 {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        h3 {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        p {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        blockquote {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        pre {
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+            font-style: normal;
+            font-variant: normal;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        #rectangle {
+            width: 40rem;
+            height: 30rem;
+            max-height: 50rem;
+            background: #2f2f2f;
+            z-index: -1;
+            border-radius: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+            display: block;
+            padding: 8px;
+        }
+
+        .row {
+            background-image: repeating-linear-gradient(90deg, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta);
+            text-align: center;
+            background-size: 1200% 1200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 60s ease infinite;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+            display: block;
+
+            padding-bottom: 4px;
+        }
+
+        .btn {
+            color: white;
+            background-color: #6e00ff;
+            border-color: #6e00ff;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 16px;
+            max-width: 16rem
+        }
+
+        #btn-primary:active {
+            color: #3c008b;
+            background-color: #6e00ff;
+            border-color: #6e00ff;
+        }
+
+        #btn-primary:hover {
+            color: #3c008b;
+            background-color: #6e00ff;
+            border-color: #6e00ff;
+        }
+
+        .input-box {
+            display: block;
+        }
+
+        .text-label {
+            color: white;
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        .color-label {
+            float: left;
+            padding-right: 4px;
+        }
+
+        .mode-block {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center;
+            padding-bottom: 4px;
+        }
+
+        .mode-label {
+            color: white;
+            font-size: 2rem;
+            display: block;
+            font-weight: bold;
+        }
+
+        .jscolor {
+            display: block;
+            margin-left: auto;
+            margin-right: 8px;
+            margin-top: 6px;
+        }
+
+        .hr-line {
+            margin: 0px 0px 8px;
+            padding: 0;
+            height: 0;
+            border: none;
+            border-top: 1px solid #666666;
+        }
+
+        .btn-mode {
+            display: inline-block;
+            width: 16rem;
+        }
+
+        .btn-rainbow {
+            background-image: repeating-linear-gradient(90deg, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta);
+            text-align: center;
+            background-size: 1200% 1200%;
+            -webkit-background-clip: unset;
+            color: white;
+            -webkit-text-fill-color: white;
+            border: 0;
+            font-weight: bold;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            animation: rainbow 60s ease infinite;
+            width: fit-content;
+        }
+
+        .footerLabel {
+            display: block;
+            margin-top: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            text-shadow: -4px -4px 8px #000, 4px -4px 8px #000, -4px 4px 8px #000, 4px 4px 8px #000;
+        }
+
+        .clr-field {
+            float: right;
+        }
+
+        @media screen and (max-width: 768px) {
+            #rectangle {
+                width: 30rem;
+            }
+
+            h1 {
+                font-size: 1.78rem;
+            }
+
+            .row {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 20px;
+                max-width: 16rem;
+            }
+
+            .text-label {
+                color: white;
+                font-size: 1.75rem;
+                float: left;
+                display: block;
+                padding-right: 4px;
+            }
+
+            .jscolor {
+                display: block;
+                max-width: 3.5rem;
+                margin-left: auto;
+                margin-right: 8px;
+                margin-top: 12px;
+            }
+
+            .btn-rainbow {
+                background-image: repeating-linear-gradient(90deg, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta);
+                text-align: center;
+                font-size: 1rem;
+                background-size: 1200% 1200%;
+                -webkit-background-clip: unset;
+                color: white;
+                -webkit-text-fill-color: white;
+                border: 0;
+                font-weight: bold;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                animation: rainbow 60s ease infinite;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #rectangle {
+                width: 25rem;
+            }
+
+            h1 {
+                font-size: 1.689rem;
+                font-weight: bold;
+            }
+
+            .row {
+                font-size: 18px;
+            }
+
+            .btn {
+                font-size: 16px;
+                font-weight: bold;
+                width: 16rem;
+                max-width: 16rem;
+            }
+
+            .text-label {
+                color: white;
+                font-size: 1.35rem;
+                float: left;
+                display: block;
+                padding-right: 1px;
+            }
+
+            .mode-label {
+                font-size: 1.75rem;
+            }
+
+            .jscolor {
+                display: block;
+                max-width: 3.5rem;
+                margin-left: auto;
+                margin-right: 8px;
+                margin-top: 6px;
+            }
+
+            .btn-mode {
+                margin-top: 0px;
+            }
+
+            .btn-rainbow {
+                background-image: repeating-linear-gradient(90deg, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta);
+                text-align: center;
+                font-size: 0.99rem;
+                background-size: 1200% 1200%;
+                -webkit-background-clip: unset;
+                color: white;
+                display: block;
+                margin-top: 12px;
+                -webkit-text-fill-color: white;
+                border: 0;
+                font-weight: bold;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                animation: rainbow 60s ease infinite;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #rectangle {
+                width: 18rem;
+            }
+
+            h1 {
+                font-size: 1.189rem;
+                font-weight: bold;
+            }
+
+            .row {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 16px;
+                font-weight: bold;
+                max-width: 10rem;
+            }
+
+            .text-label {
+                color: white;
+                font-size: 1.15rem;
+                float: left;
+                display: block;
+                padding-right: 1px;
+            }
+
+            .mode-label {
+                font-size: 1.25rem;
+            }
+
+            .jscolor {
+                display: block;
+                max-width: 3.5rem;
+                margin-left: auto;
+                margin-right: 8px;
+                margin-top: 6px;
+            }
+
+            .btn-mode {
+                margin-top: 0px;
+            }
+
+            .btn-rainbow {
+                background-image: repeating-linear-gradient(90deg, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta, #6e00ff, blue, aqua, lime, yellow, orange, red, magenta);
+                text-align: center;
+                font-size: 0.75rem;
+                background-size: 1200% 1200%;
+                -webkit-background-clip: unset;
+                color: white;
+                display: block;
+                margin-top: 12px;
+                -webkit-text-fill-color: white;
+                border: 0;
+                font-weight: bold;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                animation: rainbow 60s ease infinite;
+            }
+
+            .colorPicker {
+                max-width: 5.92rem;
+            }
+
+            .clr-field {
+                max-width: 5.92rem;
+            }
+        }
+
+
+        @media screen and (max-height: 960px) {
+            #rectangle {
+                margin-top: 2rem;
+                height: 30rem;
+            }
+        }
+
+        @media screen and (max-height: 640px) {
+            #rectangle {
+                margin-top: 2rem;
+                height: 30rem;
+            }
+        }
+
+        @media screen and (max-height: 512px) {
+            #rectangle {
+                margin-top: 1rem;
+                height: 30rem;
+            }
+        }
+
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 25%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    </style>
+    <div id="rectangle">
+        <div class="container">
+            <div class="row">
+                <h1>ESP32 RGB Strip Controller</h1>
+            </div>
+            <p class="text-label color-label">Цвет RGB ленты:</p>
+            <input type="text" class="colorPicker" data-coloris>
+            <script>
+                Coloris({
+                    format: 'hex',
+                    theme: 'polaroid',
+                    themeMode: 'dark',
+                    alpha: false
+                });
+            </script>
+            <input class="btn btn-primary btn-lg change_color" style="width:16rem; margin-top: 3.25rem;" type="button"
+                value="Сменить цвет" id="change_color" role="button" /><br>
+        </div>
+        <hr class="hr-line">
+        <div class="mode-block">
+            <p class="mode-label">Режимы/Эффекты</p>
+            <a class="btn btn-primary btn-lg btn-mode" href="?r0g0b0m1&" id="change_mode" role="button">Цвет</a><br>
+            <a class="btn btn-primary btn-lg btn-mode btn-rainbow" href="?r0g0b0m3&" id="change_mode"
+                role="button">Радуга на
+                RGB</a>
+            <a class="btn btn-primary btn-lg btn-mode btn-rainbow" href="?r0g0b0m2&" id="change_mode"
+                role="button">Радуга на
+                ARGB</a>
+            <a class="btn btn-primary btn-lg btn-mode btn-rainbow" href="?r0g0b0m4&" id="change_mode"
+                role="button">Радуга везде</a>
+        </div>
+    </div>
+    <script>
+        var red = 0, green = 0, blue = 0;
+        document.addEventListener('coloris:pick', event => {
+            red = hex2rgb(event.detail.color).r;
+            green = hex2rgb(event.detail.color).g;
+            blue = hex2rgb(event.detail.color).b;
+            console.log(red, "", green, "", blue);
+        });
+        function hex2rgb(c) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(c);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+        document.getElementById("change_color").addEventListener("click", function () {  window.location = '?r' + red + 'g' + green + 'b' + blue + 'm1&'; })
+
+    </script>
+</body>
+<footer>
+    <div class="footerLabel">
+        <p>2024 © IB WorkShop. Все права защищены.</p>
+    </div>
+</footer>
+
+</html>
